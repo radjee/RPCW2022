@@ -1,0 +1,28 @@
+<manifesto>
+	<title>TP1</title>
+	<data>21/02/2022</data>
+	<autor>Dinis Lourenço Gomes</autor>
+	<UC>Representação e Processamento de Conhecimento na Web</UC>
+	<resumo>
+		Neste TP1, foi-nos pedido para criar uma página html.
+	</resumo>
+	<ficheiros>
+		<pasta nome="Images">
+			<ficheiro>shrineisland.jpg</ficheiro>
+			<ficheiro>yakitori.jpg</ficheiro>
+			<ficheiro>mp3.jpg</ficheiro>
+			<ficheiro>fuji.jpg</ficheiro>
+			<ficheiro>ramen.jpg</ficheiro>
+			<ficheiro>mp1.jpg</ficheiro>
+			<ficheiro>sashimi.jpg</ficheiro>
+			<ficheiro>osakacastle.jpg</ficheiro>
+			<ficheiro>udon.png</ficheiro>
+			<ficheiro>mp2.jpg</ficheiro>
+			<ficheiro>sushi.jpg</ficheiro>
+			<ficheiro>akihabara.jpg</ficheiro>
+		</pasta>
+		<ficheiro>w3.css</ficheiro>
+		<ficheiro>style.css</ficheiro>
+		<ficheiro>mainPage.html</ficheiro>
+	</ficheiros>
+</manifesto>
