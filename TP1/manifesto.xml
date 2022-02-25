@@ -1,28 +1,57 @@
-<manifesto>
-	<title>TP1</title>
-	<data>21/02/2022</data>
-	<autor>Dinis Lourenço Gomes</autor>
-	<UC>Representação e Processamento de Conhecimento na Web</UC>
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+	<meta>
+		<titulo>TP1: Uma página Web</titulo>
+		<data>25/02/2022</data>
+		<autor>
+			<id>PG47138</id>
+			<nome>Dinis Lourenço Gomes</nome>
+		</autor>
+			<uc>
+				<sigla>RPCW</sigla>
+				<nome>Representação e Processamento de Conhecimento na Web</nome>
+			</uc>
+	</meta>
+
 	<resumo>
-		Neste TP1, foi-nos pedido para criar uma página html.
+		<p>Neste TP1, foi-nos pedido para criar uma página html.</p>
 	</resumo>
-	<ficheiros>
+
+	<resultados>
 		<pasta nome="Images">
-			<ficheiro>shrineisland.jpg</ficheiro>
-			<ficheiro>yakitori.jpg</ficheiro>
-			<ficheiro>mp3.jpg</ficheiro>
-			<ficheiro>fuji.jpg</ficheiro>
-			<ficheiro>ramen.jpg</ficheiro>
-			<ficheiro>mp1.jpg</ficheiro>
-			<ficheiro>sashimi.jpg</ficheiro>
-			<ficheiro>osakacastle.jpg</ficheiro>
-			<ficheiro>udon.png</ficheiro>
-			<ficheiro>mp2.jpg</ficheiro>
-			<ficheiro>sushi.jpg</ficheiro>
-			<ficheiro>akihabara.jpg</ficheiro>
+			<resultado><url>shrineisland.jpg</url>
+				<texto>Imagen do templo da ilha</texto></resultado>
+			<resultado><url>yakitori.jpg</url>
+				<texto>Imagem de yakitori</texto></resultado>
+			<resultado><url>mp3.jpg</url>
+				<texto>Imagem de fundo</texto></resultado>
+			<resultado><url>fuji.jpg</url>
+				<texto>Imagem do monte Fuji</texto></resultado>
+			<resultado><url>ramen.jpg</url>
+				<texto>Imagem de Ramen</texto></resultado>
+			<resultado><url>mp1.jpg</url>
+				<texto>Imagem de undo</texto></resultado>
+			<resultado><url>sashimi.jpg</url>
+				<texto>Imagem de sashimi</texto></resultado>
+			<resultado><url>osakacastle.jpg</url>
+				<texto>Imagem do castelo de osaka</texto></resultado>
+			<resultado><url>udon.png</url>
+				<texto>Imagem de udon</texto></resultado>
+			<resultado><url>mp2.jpg</url>
+				<texto>Imagem de fundo</texto></resultado>
+			<resultado><url>sushi.jpg</url>
+				<texto>Imagem de Sushi</texto></resultado>
+			<resultado><url>akihabara.jpg</url>
+				<texto>Imagem do distrito de Akihabara</texto></resultado>
 		</pasta>
-		<ficheiro>w3.css</ficheiro>
-		<ficheiro>style.css</ficheiro>
-		<ficheiro>mainPage.html</ficheiro>
-	</ficheiros>
-</manifesto>
+
+		<resultado><url>w3.css</url>
+				<texto>Stylesheet do w3</texto></resultado>
+		<resultado><url>style.css</url>
+				<texto>Stylesheet personalizado</texto></resultado>
+		<resultado><url>mainPage.html</url>
+				<texto>Página Web principal</texto></resultado>
+		<resultado><url>manifesto.xml</url>
+				<texto>Manifesto do TPC</texto></resultado>
+	</resultados>
+</doc>
