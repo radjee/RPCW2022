@@ -49,10 +49,9 @@ def m_generator(index, title, year, cast, genres):
             <!-- Title -->
             <div class="container">
     '''
-    content += f"\t\t\t<p><b>{title}</b> <u>{year}</u></p>"
+    content += f"\t\t\t\t<p><b>{title}</b> <u>{year}</u></p>"
 
-                
-    content +='''
+    content += '''
             </div>
 
             <!-- Cast -->
@@ -62,9 +61,8 @@ def m_generator(index, title, year, cast, genres):
                     <div class="stuff">
     '''
     for actor in cast:
-        content += f'\t\t\t\t\t<a class="info" href="../actors/a{actor[1]}">{actor[0]}</p>'
-
-    content +='''
+        content += f'\t\t\t\t\t\t<a class="info" href="../actors/a{actor[1]}.html">{actor[0]}</a>'
+    content += '''
                     </div>
                 </div>
 
@@ -74,9 +72,9 @@ def m_generator(index, title, year, cast, genres):
     '''
 
     for genre in genres:
-        content += f'\t\t\t\t\t<p class="info">{genre}</p>'
+        content += f'\t\t\t\t\t\t<p class="info">{genre}</p>'
 
-    content +='''
+    content += '''
                     </div>
                 </div>
             </div>

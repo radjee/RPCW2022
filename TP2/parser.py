@@ -1,6 +1,5 @@
 from ctypes import cast
 import json
-import unicodedata
 import movie_generator as mg
 import actor_generator as ag
 import index_generator as ig
@@ -8,7 +7,7 @@ import index_generator as ig
 # Function that gets the movie title
 
 def getTitle(movie):
-    return movie['title']
+    return (movie['title']).lower()
 
 def getActor(actor):
     return str(actor, 'UTF-8')
@@ -22,27 +21,26 @@ data.sort(key=getTitle)
 
 actors = {}
 
-
-
-
 # Gerar movies html
-for m_index, movie in enumerate(data):
+for index, movie in enumerate(data):
     title = movie.get("title")
     cast_m = movie.get("cast")
     genres = movie.get("genres")
 
     for actor in cast_m:
         if actor in actors:
-            actors[actor][0].add((title, m_index+1))
+            actors[actor][0].add((title, index+1))
 
             for genre in genres:
                 actors[actor][1].add(genre)
         else:
-            actors[actor] = (set([(title, m_index+1)]), set(genres))
+            actors[actor] = (set([(title, index+1)]), set(genres))
 
 # Sort Actors
 list_actors = list(actors.items())
 list_actors.sort()
+
+names = list(map(lambda x: x[0], list_actors))
 
 # Generate actor htmls
 for a_index, actor in enumerate(list_actors):
@@ -50,7 +48,10 @@ for a_index, actor in enumerate(list_actors):
     movies = actor[1][0]
     genres = actor[1][1]
 
-    ag.a_generator(a_index+1, actor_name, movies, genres)
+    #ag.a_generator(a_index+1, actor_name, movies, genres)
+
+movie_tuples = []
+cast_tuple = []
 
 for m_index, movie in enumerate(data):
     title = movie.get("title")
@@ -59,16 +60,16 @@ for m_index, movie in enumerate(data):
     genres = movie.get("genres")
 
     # Generate movie htmls
-    cast_tuple = []
-
     for p in cast_m:
-        if p in list_actors:
-            cast_tuple += (p, list_actors.index(p))
-        
-    mg.m_generator(m_index+1, title, year, cast_tuple, genres)
+        if p in names:
+            cast_tuple.append((p, names.index(p)+1))
+    
+    movie_tuples.append((m_index+1, title))
 
-    # Gerar index.html
-    #ig.index_generator(m_index, title)
+    #mg.m_generator(m_index+1, title, year, cast_tuple, genres)
+
+# Gerar index.html
+ig.index_generator(movie_tuples)
 
 # Closing File
 f.close()

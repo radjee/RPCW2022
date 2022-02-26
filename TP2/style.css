@@ -25,6 +25,16 @@
     flex-wrap: wrap;
 }
 
+.poster {
+    padding: 3px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 2px;
+    width: 100px;
+    height: 160px;
+}
+
 .info {
     padding: 3px;
     border: 1px solid black;

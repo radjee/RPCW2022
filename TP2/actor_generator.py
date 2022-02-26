@@ -5,7 +5,7 @@ def a_generator(index, ator, movies, genres):
     <!DOCTYPE html>
     <html>'''
 
-    content += f"<title>{ator}</title>"
+    content += f"<title>{ator}</title>\n"
 
     content += '''
         <meta charset="UTF-8">
@@ -51,8 +51,7 @@ def a_generator(index, ator, movies, genres):
     '''
     content += f"\t\t\t<p><b>{ator}</b></p>"
 
-                
-    content +='''
+    content += '''
             </div>
             
             <!-- Movies Stared in -->
@@ -61,10 +60,11 @@ def a_generator(index, ator, movies, genres):
                     Movies stared in:
                     <div class="stuff">
     '''
+
     for movie in movies:
         content += f'\t\t\t\t\t<a class="info" href="../movies/f{movie[1]}.html">{movie[0]}</a>'
 
-    content +='''
+    content += '''
                     </div>
                 </div>
 
@@ -76,7 +76,7 @@ def a_generator(index, ator, movies, genres):
     for genre in genres:
         content += f'\t\t\t\t\t<p class="info">{genre}</p>'
 
-    content +='''
+    content += '''
                     </div>
                 </div>
             </div>
