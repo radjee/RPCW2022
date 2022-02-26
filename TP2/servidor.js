@@ -23,7 +23,18 @@ http.createServer(function (req, res){
     else path = ""
 
     fs.readFile(path, function(err, data) {
-        res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'})
+        switch (req.url) {
+            case "/w3.css":
+                res.writeHead(200, {"Content-Type": "text/css"});
+                break;
+
+            case "/style.css":
+                res.writeHead(200, {"Content-Type": "text/css"});
+                break;
+
+            default:
+                res.writeHead(200, {"Content-Type": "text/html"});
+        }
         if(err){
             res.write("<p>Erro na leitura de ficheiro...</p>")
         }
