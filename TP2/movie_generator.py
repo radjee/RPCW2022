@@ -61,7 +61,7 @@ def m_generator(index, title, year, cast, genres):
                     <div class="stuff">
     '''
     for actor in cast:
-        content += f'\t\t\t\t\t\t<a class="info" href="../actors/a{actor[1]}.html">{actor[0]}</a>'
+        content += f'\t\t\t\t\t\t<a class="info" href="/atores/a{actor[1]}">{actor[0]}</a>'
     content += '''
                     </div>
                 </div>
@@ -82,6 +82,6 @@ def m_generator(index, title, year, cast, genres):
     </html>
     '''
 
-    with open(f"./htmls/movies/f{index}.html", "w", encoding="UTF-8") as f:
+    with open(f"./htmls/filmes/f{index}.html", "w", encoding="UTF-8") as f:
         f.truncate()
         f.write(content)

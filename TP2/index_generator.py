@@ -58,7 +58,7 @@ def index_generator(movie_tuples):
     '''
 
     for item in movie_tuples:
-        content += f'<a class="poster" href="movies/f{item[0]}.html">{item[1]}</a>\n'
+        content += f'<a class="poster" href="/filmes/f{item[0]}">{item[1]}</a>\n'
 
     content +='''
                     </div>

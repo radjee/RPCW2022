@@ -62,7 +62,7 @@ def a_generator(index, ator, movies, genres):
     '''
 
     for movie in movies:
-        content += f'\t\t\t\t\t<a class="info" href="../movies/f{movie[1]}.html">{movie[0]}</a>'
+        content += f'\t\t\t\t\t<a class="info" href="/filmes/f{movie[1]}">{movie[0]}</a>'
 
     content += '''
                     </div>
@@ -84,6 +84,6 @@ def a_generator(index, ator, movies, genres):
     </html>
     '''
 
-    with open(f"./htmls/actors/a{index}.html", "w", encoding="UTF-8") as f:
+    with open(f"./htmls/atores/a{index}.html", "w", encoding="UTF-8") as f:
         f.truncate()
         f.write(content)

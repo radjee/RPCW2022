@@ -2,13 +2,14 @@ from ctypes import cast
 import json
 import movie_generator as mg
 import actor_generator as ag
+import actores_generator as ags
 import index_generator as ig
 
 # Function that gets the movie title
-
 def getTitle(movie):
     return (movie['title']).lower()
 
+# Function that gets the actors name according to utf-8
 def getActor(actor):
     return str(actor, 'UTF-8')
 
@@ -40,6 +41,7 @@ for index, movie in enumerate(data):
 list_actors = list(actors.items())
 list_actors.sort()
 
+actor_tuples = []
 names = list(map(lambda x: x[0], list_actors))
 
 # Generate actor htmls
@@ -48,10 +50,12 @@ for a_index, actor in enumerate(list_actors):
     movies = actor[1][0]
     genres = actor[1][1]
 
-    #ag.a_generator(a_index+1, actor_name, movies, genres)
+    actor_tuples.append((a_index, actor_name))
+    ag.a_generator(a_index+1, actor_name, movies, genres)
 
 movie_tuples = []
 cast_tuple = []
+
 
 for m_index, movie in enumerate(data):
     title = movie.get("title")
@@ -66,10 +70,13 @@ for m_index, movie in enumerate(data):
     
     movie_tuples.append((m_index+1, title))
 
-    #mg.m_generator(m_index+1, title, year, cast_tuple, genres)
+    mg.m_generator(m_index+1, title, year, cast_tuple, genres)
 
 # Gerar index.html
 ig.index_generator(movie_tuples)
+
+# Gerar atores.html
+ags.atores_generator(actor_tuples)
 
 # Closing File
 f.close()
