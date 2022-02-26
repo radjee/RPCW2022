@@ -54,8 +54,6 @@ for a_index, actor in enumerate(list_actors):
     ag.a_generator(a_index+1, actor_name, movies, genres)
 
 movie_tuples = []
-cast_tuple = []
-
 
 for m_index, movie in enumerate(data):
     title = movie.get("title")
@@ -64,6 +62,8 @@ for m_index, movie in enumerate(data):
     genres = movie.get("genres")
 
     # Generate movie htmls
+    cast_tuple = []
+    
     for p in cast_m:
         if p in names:
             cast_tuple.append((p, names.index(p)+1))
