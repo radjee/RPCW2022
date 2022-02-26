@@ -18,40 +18,11 @@
 	</resumo>
 
 	<resultados>
-		<pasta nome="Images">
-			<resultado><url>shrineisland.jpg</url>
-				<texto>Imagen do templo da ilha</texto></resultado>
-			<resultado><url>yakitori.jpg</url>
-				<texto>Imagem de yakitori</texto></resultado>
-			<resultado><url>mp3.jpg</url>
-				<texto>Imagem de fundo</texto></resultado>
-			<resultado><url>fuji.jpg</url>
-				<texto>Imagem do monte Fuji</texto></resultado>
-			<resultado><url>ramen.jpg</url>
-				<texto>Imagem de Ramen</texto></resultado>
-			<resultado><url>mp1.jpg</url>
-				<texto>Imagem de undo</texto></resultado>
-			<resultado><url>sashimi.jpg</url>
-				<texto>Imagem de sashimi</texto></resultado>
-			<resultado><url>osakacastle.jpg</url>
-				<texto>Imagem do castelo de osaka</texto></resultado>
-			<resultado><url>udon.png</url>
-				<texto>Imagem de udon</texto></resultado>
-			<resultado><url>mp2.jpg</url>
-				<texto>Imagem de fundo</texto></resultado>
-			<resultado><url>sushi.jpg</url>
-				<texto>Imagem de Sushi</texto></resultado>
-			<resultado><url>akihabara.jpg</url>
-				<texto>Imagem do distrito de Akihabara</texto></resultado>
-		</pasta>
-
 		<resultado><url>w3.css</url>
 				<texto>Stylesheet do w3</texto></resultado>
 		<resultado><url>style.css</url>
 				<texto>Stylesheet personalizado</texto></resultado>
 		<resultado><url>mainPage.html</url>
 				<texto>Página Web principal</texto></resultado>
-		<resultado><url>manifesto.xml</url>
-				<texto>Manifesto do TPC</texto></resultado>
 	</resultados>
 </doc>
