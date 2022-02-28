@@ -10,8 +10,8 @@ def m_generator(index, title, year, cast, genres):
     content += '''
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../../w3.css">
-        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="/w3">
+        <link rel="stylesheet" href="/style">
 
         <style>
             body {

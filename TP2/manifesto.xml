@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+	<meta>
+		<titulo>TP2: Um fileserver de filmes</titulo>
+		<data>28/02/2022</data>
+		<autor>
+			<id>PG47138</id>
+			<nome>Dinis Lourenço Gomes</nome>
+		</autor>
+			<uc>
+				<sigla>RPCW</sigla>
+				<nome>Representação e Processamento de Conhecimento na Web</nome>
+			</uc>
+	</meta>
+
+	<resumo>
+		<p>Neste TP2, foi-nos pedido para criar um fileserver de filmes.</p>
+		<p>A pasta htmls contem duas pastas uma com os htmls gerados dos atores e a outra com a dos filmes.</p>
+		<p>Contém também dois htmls que são o índice de atores e o índice de filmes</p>
+	</resumo>
+
+	<resultados>		
+		<resultado><url>w3.css</url>
+			<texto>Stylesheet w3</texto></resultado>
+		<resultado><url>style.css</url>
+			<texto>Stylesheet personalizada</texto></resultado>
+		<resultado><url>parser.py</url>
+			<texto>Programa em python que processa o JSON e utiliza os geradores de htmls</texto></resultado>
+		<resultado><url>actor_generator.py</url>
+			<texto>Programa que gera htmls para uma pagina de atores</texto></resultado>
+		<resultado><url>movie_generator.py</url>
+			<texto>Programa que gera htmls para uma pagina de filmes</texto></resultado>
+		<resultado><url>actores_generator.py</url>
+			<texto>Programa que gera htmls para um índice de atores</texto></resultado>
+		<resultado><url>index_generator.py</url>
+			<texto>Programa que gera htmls para um índice de filmes</texto></resultado>
+		<resultado><url>servidor.js</url>
+			<texto>Programa que cria servidor http em node.js</texto></resultado>
+		<resultado><url>cinemaATP.json</url>
+			<texto>Ficheiro jason com informação sobre os filmes</texto></resultado>
+	</resultados>
+</doc>

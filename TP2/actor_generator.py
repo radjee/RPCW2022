@@ -10,8 +10,8 @@ def a_generator(index, ator, movies, genres):
     content += '''
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../../w3.css">
-        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="/w3">
+        <link rel="stylesheet" href="/style">
 
         <style>
             body {
@@ -26,7 +26,7 @@ def a_generator(index, ator, movies, genres):
             h6 {
                 font-family: "Playfair Display";
                 letter-spacing: 5px;
-            }
+            }            
         </style>
 
         <body>
