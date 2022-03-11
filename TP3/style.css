@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 0.3cm;
+    margin-bottom: 0.8cm;
+}
+
+.item-header {
+    margin-left: 0.5cm;
+}
+
+.item-text {
+    width: 50%; 
+    height: auto;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.stuff {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.poster {
+    padding: 3px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 2px;
+    width: 100px;
+    height: 160px;
+}
+
+.info {
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-right: 2px;
+}
