@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+	<meta>
+		<titulo>TP3: Servidor em JavaScript que comunica com Servidor Json</titulo>
+		<data>11/03/2022</data>
+		<autor>
+			<id>PG47138</id>
+			<nome>Dinis Lourenço Gomes</nome>
+		</autor>
+			<uc>
+				<sigla>RPCW</sigla>
+				<nome>Representação e Processamento de Conhecimento na Web</nome>
+			</uc>
+	</meta>
+
+	<resumo>
+		<p>Neste TP3, foi-nos pedido para criar um servidor capaz de pedir informação a um servidor json e gerar páginas html de acordo com os dados obtidos.</p>
+        <p></p>
+	</resumo>
+
+	<resultados>		
+		<resultado><url>w3.css</url>
+			<texto>Stylesheet w3</texto></resultado>
+		<resultado><url>style.css</url>
+			<texto>Stylesheet personalizada</texto></resultado>
+		<resultado><url>servidor.js</url>
+			<texto>Programa que cria servidor http em node.js e faz pedidos a um servidor json.</texto></resultado>
+		<resultado><url>db.json</url>
+			<texto>Ficheiro jason com informação da escola de música</texto></resultado>
+	</resultados>
+</doc>
