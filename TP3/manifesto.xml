@@ -15,7 +15,7 @@
 
 	<resumo>
 		<p>Neste TP3, foi-nos pedido para criar um servidor capaz de pedir informação a um servidor json e gerar páginas html de acordo com os dados obtidos.</p>
-        <p></p>
+		<p>Existe a possibilidade de filtrar a lista de elementos a partir da tabela, por exemplo adquirir todos os alunos com um certo elemento ou curso</p>
 	</resumo>
 
 	<resultados>		
