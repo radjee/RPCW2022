@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="../w3.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        textarea {
+            min-height: 270px;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .ator {
+            float: left;
+            width: 100%;
+        }
+
+        .data {
+            float: left;
+            width: 100%;
+        }
+
+        .tasks {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            background-color: white;
+            border-radius: 4px;
+            min-height: 20px;
+        }
+
+        .main_panel {
+            float: left;
+            width: 70%;
+            margin-top: 6px;
+        }
+
+        .side_panel {
+            float: right;
+            width: 30%;
+            height: 200px;
+            margin-top: 6px;
+        }
+
+        .div_central {
+            width: 49.5%;
+            min-height: 200px;
+            margin-top: 6px;
+        }
+
+        .row:before {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/" method="POST">
+            <div class="main_panel">
+                <textarea id="description" name="description" placeholder="Descrição da tarefa..."
+                    style="height:270px; width:95%" required="true"></textarea>
+
+            </div>
+            <div class="side_panel">
+                <p>Tipo da tarefa </p>
+                <div>
+                    <select id="type" name="type" required="true">
+                        <option value="" selected disabled hidden>Selecione uma das opções</option>
+                        <option value="work">Universidade</option>
+                        <option value="home">Doméstico</option>
+                        <option value="hobby">Hobby</option>
+                        <option value="side_project">Side Project</option>
+                    </select>
+                </div>
+
+                <p>Pessoa a cumprir a tarefa </p>
+                <div class="ator">
+                    <input type="text" id="ator" name="ator" required="true" placeholder="Nome da pessoa..."
+                        required="true"></textarea>
+                </div>
+
+                <div class="data">
+                    <p>Data Limite</p>
+                    <input type="date" value="data_limite" required="true" />
+                </div>
+            </div>
+
+            <div class="row">
+                <input type="submit" value="Registar" />
+            </div>
+        </form>
+    </div>
+
+    <div>
+
+        <div class="div_central" style="float:left">
+            <p style="text-align:center">Tarefas Por Fazer</p>
+            <div class="container">
+                <div class="tasks">
+                    <ul id="tasks">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="div_central" style="float:right">
+            <p style="text-align:center">Tarefas Feitas</p>
+            <div class="container">
+                <div class="tasks">
+                    <ul id="tasks">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

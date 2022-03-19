@@ -1,0 +1,22 @@
+{
+  "tarefas": [
+    {
+      "id": 0,
+      "description": "exemplo de query",
+      "categoria": "universidade",
+      "ator": "Dinis LG",
+      "data_limite": "2022-03-19",
+      "data_post": "2022-03-19T15:48",
+      "type": "exemplo"
+    },
+    {
+      "description": "aaaaaa",
+      "categoria": "universidade",
+      "ator": "asadas",
+      "date_limite": "1111-11-11",
+      "data_post": "2022-03-19",
+      "type": "porfazer",
+      "id": 1
+    }
+  ]
+}
