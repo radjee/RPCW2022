@@ -185,6 +185,22 @@ function geraMainPage(tasksF, tasksPF) {
                 box-sizing: border-box;
             }
 
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+              background-color: #dddddd;
+            }
+
             input[type=text],
             select,
             textarea {
@@ -246,9 +262,7 @@ function geraMainPage(tasksF, tasksPF) {
             .item {
                 display: flex;
                 justify-content: space-between; 
-                margin: 5px; 
-                border: 2px solid #f2f2f2; 
-                border-radius: 4px;
+                margin: -3px;
                 padding: 2px;
                 align-items: center;
             }
@@ -309,19 +323,19 @@ function geraMainPage(tasksF, tasksPF) {
                             <option value="universidade">Universidade</option>
                             <option value="doméstico">Doméstico</option>
                             <option value="hobby">Hobby</option>
-                            <option value="side_project">Side Project</option>
+                            <option value="side project">Side Project</option>
                         </select>
                     </div>
 
                     <p>Pessoa a cumprir a tarefa </p>
                     <div class="ator">
                         <input type="text" id="ator" name="ator" required="true" placeholder="Nome da pessoa..."
-                            required="true"></textarea>
+                            required="true"></input>
                     </div>
 
                     <div class="data">
                         <p>Data Limite</p>
-                        <input type="date" id="data_limite" name="date_limite" required="true" />
+                        <input type="date" id="data_limite" name="data_limite" required="true" />
                     </div>
                 </div>
 
@@ -337,41 +351,64 @@ function geraMainPage(tasksF, tasksPF) {
                 <p style="text-align:center">Tarefas Por Fazer</p>
                 <div class="container">
                     <div class="tasks" id="tasks">
+                    <table>
+                        <colgroup>
+                            <col span="1" style="width: 20%;">
+                            <col span="1" style="width: 8%;">
+                            <col span="1" style="width: 8%;">
+                            <col span="1" style="width: 10%;">
+                            <col span="1" style="width: 10%;">
+                        </colgroup>
+                        
+                        <tbody>
+                            <tr>
+                                <th style="text-align:center">Descrição</th>
+                                <th style="text-align:center">Categoria</th>
+                                <th style="text-align:center">Ator</th>
+                                <th style="text-align:center">Data Limite</th>
+                                <th></th>
+                            </tr>
         `
 
     tasksPF.forEach(t => {
         pagHTML += `
                 <div class="item" id="${t.id}">
-                    <div>
-                        ${t.description}
-                    </div>
-                    <div>
-                        <form action="/tarefas/edit" method="POST" style="display:inline-block">
-                            <input type="hidden" name="id" value="${t.id}"/>
-                            <button type="submit" style="height: 40px; border-radius:70%; outline: none"> 
-                                <img src="edit.png" style="width:100%; float:center; text-align: center" />
-                            </button>
-                        </form>
 
-                        <form action="/tarefas/delete" method="POST" style="display:inline-block">
-                            <input type="hidden" name="id" value="${t.id}"/>
-                            <button type="submit" style="height: 40px; border-radius:70%; outline: none"> 
-                                <img src="trash.png" style="width:100%; float:center; text-align: center" />
-                            </button>
-                        </form>
-
-                        <form action="/tarefas/completa" method="POST" style="display:inline-block">
-                            <input type="hidden" name="id" value="${t.id}"/>
-                            <button type="submit" style="height: 40px; border-radius:70%; outline: none"> 
-                                <img src="checkmark.png" style="width:100%; float:center; text-align: center" />
-                            </button>
-                        </form>
-                    </div>
+                    <tr style="height:50px">
+                        <td>${t.description}</td>
+                        <td style="text-align:center">${t.categoria}</td>
+                        <td style="text-align:center">${t.ator}</td>
+                        <td style="text-align:center">${t.data_limite}</td>
+                    
+                        <td style="text-align:right">
+                            <div>
+                                <form action="/tarefas/edit" method="POST" style="display:inline-block">
+                                    <input type="hidden" name="id" value="${t.id}"/>
+                                    <button type="submit" style="height: 40px; border-radius:70%; outline: none"> 
+                                        <img src="edit.png" style="width:100%; float:center; text-align: center" />
+                                    </button>
+                                </form>
+                                <form action="/tarefas/delete" method="POST" style="display:inline-block">
+                                    <input type="hidden" name="id" value="${t.id}"/>
+                                    <button type="submit" style="height: 40px; border-radius:70%; outline: none"> 
+                                        <img src="trash.png" style="width:100%; float:center; text-align: center" />
+                                    </button>
+                                </form>
+                                <form action="/tarefas/completa" method="POST" style="display:inline-block">
+                                    <input type="hidden" name="id" value="${t.id}"/>
+                                    <button type="submit" style="height: 40px; border-radius:70%; outline: none"> 
+                                        <img src="checkmark.png" style="width:100%; float:center; text-align: center" />
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
                 </div>
             `
     });
 
-    pagHTML += `
+    pagHTML += `            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -380,30 +417,53 @@ function geraMainPage(tasksF, tasksPF) {
                 <p style="text-align:center">Tarefas Feitas</p>
                 <div class="container">
                     <div class="tasks" id="tasksF">
+                        <table>
+                            <colgroup>
+                                <col span="1" style="width: 25%;">
+                                <col span="1" style="width: 8%;">
+                                <col span="1" style="width: 8%;">
+                                <col span="1" style="width: 10%;">
+                                <col span="1" style="width: 5%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th style="text-align:center">Descrição</th>
+                                    <th style="text-align:center">Categoria</th>
+                                    <th style="text-align:center">Ator</th>
+                                    <th style="text-align:center">Data Limite</th>
+                                    <th></th>
+                                </tr>
+                            
+                        
     `
 
     tasksF.forEach(t => {
+        console.log(t)
         pagHTML += `
             <div class="item" id=${t.id}>
-                <div>
-                    ${t.id}
-                    ${t.description}
-                    ${t.categoria}
-                    ${t.data_limite}
-                </div>
-                <div style="float:right; ">
-                    <form action="/tarefas/delete" method="POST" style="display:inline-block">
-                        <input type="hidden" name="id" value="${t.id}"/>
-                        <button style="height: 40px; border-radius:70%; outline: none" onclick="myFunction()"> 
-                            <img src="trash.png" style="width:100%; float:center; text-align: center" />
-                        </button>
-                    </form>
-                </div>
-            </div>
+                <tr style="height:50px">
+                    <td style="width:5%">${t.description}</td>
+                    <td style="width:10%;text-align:center">${t.categoria}</td>
+                    <td style="width:1%;text-align:center">${t.ator}</td>
+                    <td style="width:5%;text-align:center">${t.data_limite}</td>
+                
+                    <td style="text-align:right; width: 5%">
+                        <div style="float:right;">
+                            <form action="/tarefas/delete" method="POST" style="display:inline-block">
+                                <input type="hidden" name="id" value="${t.id}"/>
+                                <button style="height: 40px; border-radius:70%; outline: none" onclick="myFunction()"> 
+                                    <img src="trash.png" style="width:100%; float:center; text-align: center" />
+                                </button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            </div>     
     `
     });
 
-    pagHTML += `
+    pagHTML += `                </tbody>
+                            </table> 
                         </div>
                     </div>
                 </div>

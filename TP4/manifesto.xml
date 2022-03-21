@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+	<meta>
+		<titulo>TP4: Servidor em JavaScript que dá host a uma To-do List.</titulo>
+		<data>11/03/2022</data>
+		<autor>
+			<id>PG47138</id>
+			<nome>Dinis Lourenço Gomes</nome>
+		</autor>
+			<uc>
+				<sigla>RPCW</sigla>
+				<nome>Representação e Processamento de Conhecimento na Web</nome>
+			</uc>
+	</meta>
+
+	<resumo>
+		<p>Neste TP4, foi-nos pedido para criar um servidor capaz de registar uma lista de tarefas.</p>
+		<p>A página gerada apresenta a possibilidade de registar/apagar tarefas.</p>
+        <p>Cada tarefa é representada por uma descrição, uma categoria, um autor e uma data limite.</p>
+	</resumo>
+
+	<resultados>		
+		<resultado><url>w3.css</url>
+			<texto>Stylesheet w3</texto></resultado>
+		<resultado><url>taskList.js</url>
+			<texto>Programa que cria servidor http em node.js e faz pedidos a um servidor json, capaz de registar/apagar tarefas.</texto></resultado>
+        <resultado><url>static.js</url>
+            <texto>Programa que trata do envio de ficheiros estaticos para o servidor http.</texto></resultado>
+		<resultado><url>to_doList.json</url>
+			<texto>Ficheiro json com as tarefas da lista</texto></resultado>
+	</resultados>
+</doc>
