@@ -15,7 +15,6 @@ function recuperaInfo(request, callback) {
         })
 
         request.on('end', () => {
-            console.log(body)
             body += "&data_post=" + dat
             body += "&type=porfazer"
             callback(parse(body))
@@ -33,7 +32,6 @@ function recuperaID(request, callback) {
         })
 
         request.on('end', () => {
-            console.log(body)
             callback(parse(body))
         })
     }
@@ -68,7 +66,6 @@ function callMainPage(res) {
 
 function postForm(req, res){
     recuperaInfo(req, resultado => {
-        console.log(resultado)
         console.log('POST de tarefa:' + JSON.stringify(resultado))
         axios.post('http://localhost:3000/tarefas', resultado)
             .then(resp => {
@@ -85,7 +82,6 @@ function postForm(req, res){
 
 function postDone(req, res){
     recuperaID(req, resultado => {
-        console.log(resultado)
         console.log('POST de tarefa:' + JSON.stringify(resultado))
 
         id = resultado["id"];
@@ -95,7 +91,6 @@ function postDone(req, res){
         axios.get(myurl)
             .then(function (resp) {
                 task = resp.data;
-                console.log(task);
 
                 task.type = "realizada";
 
@@ -118,7 +113,6 @@ function postDone(req, res){
 
 function postDelete(req, res){
     recuperaID(req, resultado => {
-        console.log(resultado)
         console.log('POST de tarefa:' + JSON.stringify(resultado))
 
         id = resultado["id"];
@@ -136,7 +130,6 @@ function postDelete(req, res){
 
 function postEdit(req, res){
     recuperaID(req, resultado => {
-        console.log(resultado)
         console.log('POST de tarefa:' + JSON.stringify(resultado))
 
         id = resultado["id"];
@@ -146,7 +139,6 @@ function postEdit(req, res){
         axios.get(myurl)
             .then(function (resp) {
                 task = resp.data;
-                console.log(task);
 
                 task.type = "realizada";
 
@@ -169,7 +161,6 @@ function postEdit(req, res){
 
 // Template para a página com a lista de alunos ------------------
 function geraMainPage(tasksF, tasksPF) {
-    console.log("entrei Main Page")
 
     let pagHTML = `
     <!DOCTYPE html>
