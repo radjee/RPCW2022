@@ -1,0 +1,37 @@
+extends layout 
+
+block content 
+    h1 Lista de Musicas 
+    h2 #{data}
+    table 
+        tr 
+            th Id
+            th Provincia
+            th Local 
+            th Titulo
+            th Musico 
+            th Observações
+            th Ficheiros de Observação
+            th File 
+            th File Type 
+            th Duração  
+            tr 
+                td #{musica.id}
+                td #{musica.prov}
+                td #{musica.local}
+                td #{musica.tit}
+                td #{musica.musico}
+                td #{musica.obs}
+                
+                if musica.obsFiles
+                    td
+                        each obj in musica.obsFiles 
+                            p #{obj.file}
+                            p #{obj.fileType}
+
+                else
+                    td -
+
+                td #{musica.file}
+                td #{musica.fileType}
+                td #{musica.duracao}
