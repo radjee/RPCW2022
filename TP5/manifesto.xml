@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+	<meta>
+		<titulo>TP5: Aplicação de registo de músicas utilizando Express.</titulo>
+		<data>29/03/2022</data>
+		<autor>
+			<id>PG47138</id>
+			<nome>Dinis Lourenço Gomes</nome>
+		</autor>
+			<uc>
+				<sigla>RPCW</sigla>
+				<nome>Representação e Processamento de Conhecimento na Web</nome>
+			</uc>
+	</meta>
+
+	<resumo>
+		<p>Neste TP5, é nos pedido para desenvolver uma aplicação capaz de apresentar um dataset de músicas.</p>
+        <p>Foi necessário formatar corretamente o dataset de modo a que fosse possível a utilização deste no json-server.</p>
+        <p>Posteriormente foi implementada a possibilidade de escolher músicas por id ou por província.</p>
+        <p>Como extra foi adicionada a possíbilidade de registar músicas extra.</p>
+	</resumo>
+
+	<resultados>		
+		<resultado><url>public/stylesheets/style.css</url>
+			<texto>Ficheiro que contem o CSS base</texto></resultado>
+		<resultado><url>app.js</url>
+			<texto>Ficheiro principal da aplicação.</texto></resultado>
+        <resultado><url>index.js</url>
+            <texto>Ficheiro de routing principal.</texto></resultado>
+        <resultado><url>musicas.js</url>
+            <texto>Ficheiro de routing para músicas.</texto></resultado>
+        <resultado><url>musica.jade</url>
+            <texto>Página de música individual</texto></resultado>
+        <resultado><url>musicas.jade</url>
+            <texto>Página da lista de músicas.</texto></resultado>
+        <resultado><url>registar.jade</url>
+            <texto>Página de registo de uma música.</texto></resultado>
+        <resultado><url>parser.py</url>
+            <texto>Ficheiro que prepara o dataset original para ser utilizado pelo json-server</texto></resultado>
+        <resultado><url>arq-son-EVO.json</url>
+            <texto>Dataset original das músicas</texto></resultado>
+		<resultado><url>data.json</url>
+			<texto>Ficheiro json resultante da correção do arq-son-EVO.json com músicas e a respetiva informação</texto></resultado>
+	</resultados>
+</doc>

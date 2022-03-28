@@ -1,0 +1,40 @@
+extends layout 
+
+block content 
+    h1 #{title}
+    h2 #{data}
+    form(name="add_musica", method="post")
+        div.input
+            span.label Província
+            br
+            input(type="text", name="prov", required="true")
+        div.input
+            span.label Local
+            br
+            input(type="text", name="local", required="true")
+        div.input
+            span.label Título
+            br
+            input(type="text", name="tit", required="true")
+        div.input
+            span.label Músico
+            br
+            input(type="text", name="musico", required="true")
+        div.input
+            span.label Observações
+            br
+            input(type="text", name="obs", required="true")
+        div.input
+            span.label Ficheiros de Observação (Separar ficheiros por ',')
+            br
+            input(type="text", name="obsFiles")
+        div.input
+            span.label Ficheiro
+            br
+            input(type="text", name="file", required="true")
+        div.input
+            span.label Duração (Formato hh:mm:ss)
+            br
+            input(type="text", name="duracao", required="true")
+        div.actions
+            input(type="submit", value="Registar")
