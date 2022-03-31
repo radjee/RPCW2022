@@ -1,0 +1,38 @@
+extends layout
+
+block content
+	header(class="w3-container w3-teal")
+		h1= title
+
+	.w3-card-4.w3-margin
+		header(class="w3-container w3-teal")
+			h3 File Submit Form
+
+		form.w3-container.w3-margin(class='w3-container' method='POST' action='/')
+			.w3-row.w3-margin-bottom
+				.w3-col.s3
+					label.w3-text-teal Descrição
+					input.w3-input(type='text' name='descricao' placeholder='Insira a descrição do ficheiro...')
+			.w3-row.w3-margin-bottom
+				.w3-col-s3 
+					labe.w3-text-teal Submissão Ficheiro
+				.w3-col.s9.w3-border 
+					input.w3-input(type='file' name='sfile')        
+			.w3-row.w3-margin-top
+				input.w3-btn.w3-teal(type='submit' value='Adicionar')
+			.w3-row.w3-margin-bottom
+
+	.w3-card-4.w3-margin
+		header(class="w3-container w3-teal" style="text-align:center")
+			h3 Lista de Ficheiros
+		table.w3-container.w3-margin(class='w3-table')
+			tbody
+				tr
+					th.w3-text-teal Nome Ficheiro 
+					th.w3-text-teal Descrição
+					th 
+				tr 
+					td aaaaaaa
+					td aaaaaaa 
+					td
+
