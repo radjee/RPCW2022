@@ -57,20 +57,21 @@ function home(files, d){
     `
 
     files.forEach(element => {
-        pagHTML += `
-            <tr>
-                <td>${element.date}</td>
-                <td>${element.name}</td>
-                <td>${element.description}</td>
-                <td>${element.size}</td>
-                <td>${element.mimetype}</td>
-                <td>
-                    <form action="/files/delete/${element.id}" method="POST">
-                        <input class="w3-btn w3-teal" type="submit" value="DELETE"/>
-                    </form>
-                </td>
-            </tr>
-        `
+        if (element.show == 'true')
+            pagHTML += `
+                <tr>
+                    <td>${element.date}</td>
+                    <td>${element.name}</td>
+                    <td>${element.description}</td>
+                    <td>${element.size}</td>
+                    <td>${element.mimetype}</td>
+                    <td>
+                        <form action="/files/delete/${element.id}" method="POST">
+                            <input class="w3-btn w3-teal" type="submit" value="DELETE"/>
+                        </form>
+                    </td>
+                </tr>
+            `
     });
 
     pagHTML += `

@@ -13,11 +13,6 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// app.get('*', (req, res, next) => {
-//   console.log("Recebi um GET!")
-//   next()
-// })
-
 app.get('/', (req, res) => {
   var d = new Date().toISOString().substring(0, 16);
   var files = jsonfile.readFileSync('./dbFiles.json')
@@ -27,7 +22,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.post('/files', upload.single('myFile'), (req, res) => {
+app.post('/files/upload', upload.single('myFile'), (req, res) => {
   let oldPath = __dirname + '/' + req.file.path
   let newPath = __dirname + '/fileStore/' + req.file.originalname
 
@@ -36,7 +31,12 @@ app.post('/files', upload.single('myFile'), (req, res) => {
   })
   var d = new Date().toISOString().substring(0, 16);
   var files = jsonfile.readFileSync('./dbFiles.json')
-  var id_f = files.length
+  var maxid = 0
+
+  files.forEach(e => {
+    if (e['id'] > maxid)
+      maxid = e['id']
+  })
   
   files.push({
     date: d,
@@ -44,7 +44,8 @@ app.post('/files', upload.single('myFile'), (req, res) => {
     mimetype: req.file.mimetype,
     size: req.file.size,
     description: req.body.descricao,
-    id: id_f + 1
+    id: maxid,
+    show: 'true'
   })
 
   jsonfile.writeFileSync('./dbFiles.json', files)
@@ -60,13 +61,23 @@ app.get("/style.css", (req, res) => {
   })
 });
 
-app.post(/\/files\/delete\/[0-9]+/, (req, res) => {
-  let id = req.url.split("/")[3]
+app.post("/files/delete/:id", (req, res) => {
+  var id = req.params.id
 
   var files = jsonfile.readFileSync('./dbFiles.json')
+  var counter = 0
 
-  files.splice(id)
+  files.forEach(e => {
+    if(e['id'] == id) {
+      if (files.splice(counter, 1) == ""){
+        files.pop()
+      }
+    }
+    counter += 1
+  })
   
+  console.log(files)
+
   jsonfile.writeFileSync('./dbFiles.json', files)
 
   res.redirect("/")
