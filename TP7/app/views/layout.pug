@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  header  
+    a(class="w3-margin-left" href="/") Home
+    a(class="w3-margin-left" href="#" onclick="window.history.go(-1)") Go back
+
+  body
+    block content

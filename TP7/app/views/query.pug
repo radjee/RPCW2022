@@ -1,0 +1,11 @@
+extends layout 
+
+block content 
+    h1= title 
+    p= description
+
+
+    if dados
+        each d in dados
+            ul 
+                li= d.id

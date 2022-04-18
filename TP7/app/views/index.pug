@@ -1,0 +1,16 @@
+extends layoutMP
+
+block content
+  h1= title
+  p= description
+
+  table(class="w3-table-all")
+    tr 
+      th Código 
+      th Título
+
+    each item in list
+      tr 
+        td 
+          a(href='/'+item.codigo)= item.codigo 
+        td= item.titulo

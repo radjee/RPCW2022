@@ -1,0 +1,39 @@
+extends layout 
+
+block content 
+    h2 #{titulo} - Código #{codigo}
+    p #{descricao} 
+
+    if filhos.length > 0
+        h2 Processos Filho
+        table(class="w3-table-all")
+            tr 
+                th Codigo 
+                th Titulo 
+            each f in filhos 
+                tr 
+                    td 
+                        a(href='/'+ f.codigo)= f.codigo 
+                    td= f.titulo
+
+    else 
+        p Não tem Processos Filho.
+
+    if nivel == 3 && processosRelacionados.length > 0
+
+        h2 Processos relacionados 
+        table(class="w3-table-all")
+            tr 
+                th Codigo 
+                th Título 
+                th Relação 
+            each processo in processosRelacionados 
+                if processo.idRel == 'eCruzadoCom' || processo.idRel == 'eComplementarDe' || processo.idRel == 'eSuplementoDe' || processo.idRel == 'eSuplementoPara'
+                    
+                    tr 
+                        td 
+                            a(href='/' + processo.codigo)= processo.codigo
+                        td= processo.titulo 
+                        td= processo.idRel
+    else 
+        p Não tem Processos Relacionados.
