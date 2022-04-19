@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
     .then(resp => {
       data = {
         title: "Página Inicial",
-        description: "Página com a lista de classes de nível 1"
+        description: "Página com a lista de classes de nível 1."
       }
       data['list'] = resp.data
       res.render('index', data)

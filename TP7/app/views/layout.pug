@@ -4,9 +4,13 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
 
-  header  
-    a(class="w3-margin-left" href="/") Home
-    a(class="w3-margin-left" href="#" onclick="window.history.go(-1)") Go back
-
+  header
+    div(class='w3-top w3-bar w3-white w3-padding w3-card')
+        a(class='w3-bar-item w3-button' href='/') Home
+        a(class='w3-bar-item w3-button' href="#" onclick="window.history.go(-1)") Go back
+    br
+    br
+    br
+    
   body
     block content
