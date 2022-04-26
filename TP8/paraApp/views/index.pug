@@ -1,11 +1,11 @@
 extends layout
 
 block content
-  h1 Lista de paragrafos
+  h1 Lista de Parágrafos
     
-  div(class="formulario" class="w3-container")
+  div(class="formulario" class="w3-container" id="#form")
     form(id="myParaForm")
-      label(for="para") Escreva o paragrafo:
+      label(for="para")
       input(name="para" id="paraText" class="w3-input w3-border w3-light-grey" placeholder="Escreva o paragrafo..." required)
       div(class="w3-center")
         br
@@ -19,6 +19,6 @@ block content
   
   footer(class="w3-footer")
     address
-      p(style="text-align:center") Gerado por Dinis Gomes || Ultima modificação em: <span id="data"></span>
+      p(style="text-align:center") Gerado por Dinis LG || Modificado em: <span id="data"></span>
 
   script(src="/javascripts/scripts.js")

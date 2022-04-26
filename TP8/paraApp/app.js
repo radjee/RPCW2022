@@ -14,7 +14,9 @@ var app = express();
 var mongoDB = 'mongodb://localhost/RPCWparas'
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true})
 var db = mongoose.connection
+
 db.on('error', console.error.bind(console, 'Erro de conexão ao mongoDB'))
+
 db.once('open', () => {
   console.log("Conexão ao MongoDB realizada com sucesso!")
 })

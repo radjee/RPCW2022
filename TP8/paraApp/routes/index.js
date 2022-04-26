@@ -41,12 +41,14 @@ router.delete('/para', function(req, res, next) {
 });
 
 router.put('/para', function(req, res, next) {
-  var d = new Date().toISOString().substring(0,16)
+  var d = new Date().toISOString().substring(0, 16)
+  
   paraEdit = {
     _id: req.body._id,
     para: req.body.para,
     editado: d
   }
+  
   Para.atualizar(paraEdit)
     .then(dados => {
       res.status(201).jsonp(dados)

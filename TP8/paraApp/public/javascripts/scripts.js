@@ -9,15 +9,19 @@ function reloadList() {
             var item = `<div class="li-item row">
                 <h2 id="paragrafo">${p.para}</h2>
                 <div class="column">
-                    <p><strong>Criado a:</strong> ${p.data}</p>
+                    <p>
+                        <b>Criado a:</b> ${p.data}
+                    </p>
                 `
                 
             if (p.editado != undefined) {
-                    item +=  `<p><strong>Editado a:</strong> ${p.editado}</p>`
+                    item +=  `<p>
+                        <b>Editado a:</b> ${p.editado}
+                    </p>`
             }
 
             item += `
-                    <p><small>Id: ${p._id}</small></p>
+                    <p><small><b>Id</b>: ${p._id}</small></p>
                 </div>
                 <div class="column">
                     <button class="w3-right w3-button w3-round w3-teal w3-hover-white" id="editarPara" onclick="editar('${p._id}','${p.para}')">Editar</button>
@@ -80,8 +84,8 @@ $(function() {
             data: { _id: $("#atualizarPara").val(), para: $('#paraText').val()},
             type: 'PUT',
             success: function(response) {
-                $("#paraText").val("")
-                reloadList()
+                $("#paraText").val("");
+                reloadList();
             }
         });
     })
@@ -89,8 +93,8 @@ $(function() {
     $("body").on('click', '#reset', () => {
         event.preventDefault()
         $('#paraText').val("");
-        $("#metodo").empty()
-        $("#metodo").append(adicionar)
+        $("#metodo").empty();
+        $("#metodo").append(adicionar);
     })
     
 })

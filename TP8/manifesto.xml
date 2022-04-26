@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+	<meta>
+		<titulo>TP8: Introdução/Remoção/Edição e display de parágrafos na página e na BD.</titulo>
+		<data>26/04/2022</data>
+		<autor>
+			<id>PG47138</id>
+			<nome>Dinis Lourenço Gomes</nome>
+		</autor>
+			<uc>
+				<sigla>RPCW</sigla>
+				<nome>Representação e Processamento de Conhecimento na Web</nome>
+			</uc>
+	</meta>
+
+	<resumo>
+		<p>Neste TPC foi nos pedido para desenhar uma pagina com submissao de parágrafos com a possibilidade
+			 de apagar e/ou editar o parágrafo da base de dados e posteriormente na página.</p>
+	</resumo>
+
+	<resultados>		
+		<resultado><url>style.css</url>
+			<texto>Ficheiro que contem o CSS.</texto></resultado>
+		<resultado><url>app.js</url>
+			<texto>Ficheiro principal da aplicação.</texto></resultado>
+        <resultado><url>index.pug</url>
+            <texto>Ficheiro PUG da página principal.</texto></resultado>
+        <resultado><url>controllers/para.js</url>
+            <texto>Ficheiro que controla os paragrafos na base de dados.</texto></resultado>
+        <resultado><url>models/para.pug</url>
+            <texto>Schema de um parágrafo na BD.</texto></resultado>
+	</resultados>
+</doc>
