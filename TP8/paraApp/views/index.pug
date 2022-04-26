@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1 Lista de paragrafos
+    
+  div(class="formulario" class="w3-container")
+    form(id="myParaForm")
+      label(for="para") Escreva o paragrafo:
+      input(name="para" id="paraText" class="w3-input w3-border w3-light-grey" placeholder="Escreva o paragrafo..." required)
+      div(class="w3-center")
+        br
+        span(id="metodo")
+        button(class="w3-button w3-round w3-red w3-hover-white" id="reset") Reset
+
+  div(id="paraList")
+
+  br
+  br
+  
+  footer(class="w3-footer")
+    address
+      p(style="text-align:center") Gerado por Dinis Gomes || Ultima modificação em: <span id="data"></span>
+
+  script(src="/javascripts/scripts.js")
