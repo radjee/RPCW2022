@@ -3,7 +3,7 @@ var adicionar = '<button class="w3-button w3-round w3-teal w3-hover-white" id="a
 function reloadList() {
     $("#metodo").empty()
     $("#metodo").append(adicionar)
-    $("#paraList").empty()
+    $("#listaPara").empty()
     $.get("http://localhost:4000/para", dados => {
         dados.forEach(p => {
             var item = `<div class="li-item row">
@@ -30,7 +30,7 @@ function reloadList() {
             </div>
             `
 
-            $("#paraList").append(item)
+            $("#listaPara").append(item)
         })
     })
     var d = new Date().toISOString().substring(0, 20)

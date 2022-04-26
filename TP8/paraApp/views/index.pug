@@ -3,7 +3,7 @@ extends layout
 block content
   h1 Lista de Parágrafos
     
-  div(class="formulario" class="w3-container" id="#form")
+  div(class="inputform" class="w3-container" id="#form")
     form(id="myParaForm")
       label(for="para")
       input(name="para" id="paraText" class="w3-input w3-border w3-light-grey" placeholder="Escreva o paragrafo..." required)
@@ -12,13 +12,6 @@ block content
         span(id="metodo")
         button(class="w3-button w3-round w3-red w3-hover-white" id="reset") Reset
 
-  div(id="paraList")
-
-  br
-  br
-  
-  footer(class="w3-footer")
-    address
-      p(style="text-align:center") Gerado por Dinis LG || Modificado em: <span id="data"></span>
+  div(id="listaPara")
 
   script(src="/javascripts/scripts.js")
